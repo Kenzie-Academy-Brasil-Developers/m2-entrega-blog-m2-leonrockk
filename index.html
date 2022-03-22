@@ -4,30 +4,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>m2-entrega-blog-m2</title>
+  <title>Cadastro - m2-entrega-blog-m2</title>
   <link rel="stylesheet" href="src/styles/reset.css">
   <link rel="stylesheet" href="src/styles/style.css">
 </head>
 <body>
-  <div>
-    <div id="upperBar">
-      <div id="userInfo">
-        <div id="userProfilePicture">
-          </div> 
-        <h3 id="displayUsername"></h3>
-      </div>
-      <div class="logoutButton">
-        <button id="logoutButton">Logout</button>
-      </div>
-
-    </div>
-    <div class="pageBody" id="pageBody">
-      <div id="createPostContainer">
-          <textarea name="createPostText" id="createPostInput" cols="10" rows="10"placeholder="Comece seu post incrível!"></textarea>
-        <input type="button" id="createPostButton" value="+">
-      </div>
-    </div>
+  
+  <div class="inputInfo">
+    <h2>Cadastro</h2>
+    <form>
+      <input type="text" name="usernameCreation" placeholder="Nome de usuário" required="true">
+      <input type="email" name="emailCreation" placeholder="Email" required="true">
+      <input type="url" name="profilePictureCreation"  required="true" placeholder="Escolher foto de perfil">
+      <input type="password" name="passwordCreation" placeholder="Senha" required="true">
+      <button type="submit" id="signUpButton">Cadastrar</button>
+    </form>
   </div>
-  <script type="module" src="./src/MainPage.js"></script>
+
+  <script type="module" src="./src/cadastrar.js"></script>
 </body>
 </html>

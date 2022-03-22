@@ -47,7 +47,7 @@ class Api {
             Api.loadUserInfo()
             res
         })
-        .then(setTimeout(() => {window.location.href = "./index.html"}, 2000))
+        .then(setTimeout(() => {window.location.href = "./MainPage.html"}, 2000))
         .catch((error) => console.log(error));
     }
 
