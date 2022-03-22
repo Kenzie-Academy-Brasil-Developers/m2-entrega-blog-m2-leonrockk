@@ -12,33 +12,22 @@
   <div>
     <div id="upperBar">
       <div id="userInfo">
-        <img src="src/avatar-picture.jpg" alt="User Profile Picture" id="userProfilePicture"> <!-- Foto de perfil -->
-        <h3>~Username~</h3>
+        <div id="userProfilePicture">
+          </div> 
+        <h3 id="displayUsername"></h3>
       </div>
       <div class="logoutButton">
-        <button> Logout</button>
+        <button id="logoutButton">Logout</button>
       </div>
 
     </div>
-    <div class="pageBody"> <!-- Corpo da página -->
+    <div class="pageBody" id="pageBody">
       <div id="createPostContainer">
-        <input type="textarea" name="" id="createPostInput" placeholder="Comece seu post incrível!">
+          <textarea name="createPostText" id="createPostInput" cols="10" rows="10"placeholder="Comece seu post incrível!"></textarea>
         <input type="button" id="createPostButton" value="+">
-        <!-- <button  id="createPostButton">+</button> -->
-      </div>
-      <div class="PostExemplo">
-        <div>
-          <img src="" alt=""> <!-- post owner profile picture -->
-          <div> <!-- username, postagem -->
-
-          </div>
-          <div> <!-- Editar, excluir, data -->
-
-          </div>
-        </div>
       </div>
     </div>
   </div>
-  <script src="./src/Api.js"></script>
+  <script type="module" src="./src/MainPage.js"></script>
 </body>
 </html>
