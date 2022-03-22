@@ -41,6 +41,7 @@ button {
     font-size: 18px;
     line-height: 22px;
     color: #fff;
+    cursor: pointer ;
 }
 
 h2 {
@@ -51,25 +52,13 @@ h2 {
     color: #fff;
 }
 
-#upload-photo {
-    opacity: 0;
-    position: absolute;
-    z-index: -1;
-}
-
-label {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
-input::placeholder, label{
+input::placeholder{
     color: #c0c0c0;
     font-weight: 100;
     font-size: 15px;
 }
 
-#userProfilePicture {
+#userProfilePicture img {
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -93,9 +82,14 @@ input::placeholder, label{
     padding: 10px;
 }
 
+.logoutButton button {
+    cursor: pointer;
+}
+
 .pageBody {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 body, html {
@@ -104,6 +98,7 @@ body, html {
 
 #createPostContainer {
     margin-top: 25px;
+    margin-bottom: 20px;
 }
 
 #createPostContainer, #createPostInput {
@@ -111,11 +106,22 @@ body, html {
     width: 601px;
     height: 97px;
     background-color: white;
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 25%);
+    box-sizing: border-box;
+}
+
+#createPostContainer:focus, #createPostInput:focus {
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
 }
 
+#createPostInput {
+    margin: 0px;
+    font-family: inherit;
+    font-size: medium;
+}
+
 #createPostButton {
-    margin: 12% 0% 0 -6%;
+    margin: 11% 0% 0 -6%;
     width: 25px;
     height: 25px;
     color: white;
@@ -124,4 +130,76 @@ body, html {
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
+    cursor: pointer;
+}
+
+.wholePostDiv {
+    display: flex;
+    width: 601px;
+    min-height: 150px;
+    max-height: fit-content; 
+    background-color: white;
+    margin: 10px 0px;
+    box-shadow: 0px 3px 4px rgb(0 0 0 / 25%);
+    justify-content: space-evenly;
+}
+
+.postOwnerImg, .postOwnerImg img {
+    width: 60px;
+    height: 60px;
+}
+.postOwnerImg {
+    margin: 15px;
+}
+
+.postOwnerImg img {
+    border-radius: 50%;
+}
+
+.postInfo {
+    margin: 10px;
+    width: 68%;
+}
+
+.postInfo h4 {
+    font-size: large;
+    font-weight: 700;
+}
+
+.postInfo p {
+    font-size: smaller;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.postDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.postDetails h5 {
+   margin: 10px 0px;
+}
+
+.editPostLink {
+    color: #6495ED;
+}
+
+.deletePostLink {
+    color: #ED6464;
+}
+
+.editPostLink, .deletePostLink {
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.postCreatedAt {
+    color: #989898;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
 }
